@@ -69,7 +69,7 @@ public class KVCache<K,V> implements KeyValueInterface<K, V>{
 	 * Removes an entry to this cache.
 	 * @param key the key with which the specified value is to be associated.
 	 */
-	public void remove (K key) {
+	public void del (K key) {
 		// implement me
 	}
 } // end class LRUCache

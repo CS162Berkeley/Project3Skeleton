@@ -54,4 +54,11 @@ public interface KeyValueInterface<K,V> {
 	 * @throws IOException if there is an error when looking up the object store
 	 */
 	public V get(K key) throws IOException;
+	
+	/**
+	 * Delete the key-value object corresponding to the provided key 
+	 * @param key key is the object used to index into the store
+	 * @throws IOException if there is an error when looking up the object store
+	 */
+	public void del(K key) throws IOException;
 }

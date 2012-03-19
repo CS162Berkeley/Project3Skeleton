@@ -66,4 +66,9 @@ public class KVClient<K, V> implements KeyValueInterface<K, V> {
 		// implement me
 		return null;
 	}
+
+	@Override
+	public void del(K key) throws IOException {
+		// implement me		
+	}
 }

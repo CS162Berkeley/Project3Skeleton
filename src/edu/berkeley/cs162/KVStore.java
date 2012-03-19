@@ -78,4 +78,14 @@ public class KVStore<K, V> implements KeyValueInterface<K, V> {
 	private void putDelay() {
 		delay();
 	}
+
+	private void delDelay() {
+		delay();
+	}
+	
+	@Override
+	public void del(K key) throws IOException {
+		delDelay();
+		this.store.remove(key);
+	}
 }
