@@ -60,9 +60,11 @@ public class KVCache<K,V> implements KeyValueInterface<K, V>{
 	 * If the cache is full, the LRU (least recently used) entry is removed from the cache.
 	 * @param key    the key with which the specified value is to be associated.
 	 * @param value  a value to be associated with the specified key.
+	 * @return 
 	 */
-	public void put (K key, V value) {
+	public boolean put (K key, V value) {
 		// implement me
+		return false;
 	}
 
 	/**

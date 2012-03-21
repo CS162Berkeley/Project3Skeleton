@@ -50,9 +50,14 @@ public class KVStore<K, V> implements KeyValueInterface<K, V> {
 	}
 	
 	@Override
-	public void put(K key, V value) throws KVException {
+	public boolean put(K key, V value) throws KVException {
 		putDelay();
+		V existingValue = get(key);
 		store.put(key, value);
+		if (existingValue == null) {
+			return false;
+		}
+		return true;
 	}
 
 	@Override

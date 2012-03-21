@@ -50,8 +50,9 @@ public class KeyServer<K, V> implements KeyValueInterface<K, V> {
 		// implement me
 	}
 	
-	public void put(K key, V value) throws KVException {
+	public boolean put(K key, V value) throws KVException {
 		// implement me
+		return false;
 	}
 	
 	public V get (K key) throws KVException {

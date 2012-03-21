@@ -42,9 +42,10 @@ public interface KeyValueInterface<K,V> {
 	 * Insert Key, Value pair into the storage unit 
 	 * @param key is the object used to index into the store
 	 * @param value is the object corresponding to a unique key
+	 * @returns true if value already existed for key, false otherwise
 	 * @throws IOException is thrown when there is an error when inserting the entry into the store 
 	 */
-	public void put(K key, V value) throws KVException;
+	public boolean put(K key, V value) throws KVException;
 	
 	/**
 	 * Retrieve the object corresponding to the provided key 

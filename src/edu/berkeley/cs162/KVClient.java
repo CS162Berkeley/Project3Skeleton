@@ -55,8 +55,9 @@ public class KVClient<K, V> implements KeyValueInterface<K, V> {
 	}
 	
 	@Override
-	public void put(K key, V value) throws KVException {
+	public boolean put(K key, V value) throws KVException {
 		// implement me
+		return false;
 	}
 
 	@SuppressWarnings("unchecked")
