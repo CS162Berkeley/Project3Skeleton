@@ -29,8 +29,6 @@
  */
 package edu.berkeley.cs162;
 
-import java.io.IOException;
-
 /**
  * This class defines the salve key value servers. Each individual KeyServer 
  * would be a fully functioning Key-Value server. For Project 3, you would 
@@ -52,17 +50,17 @@ public class KeyServer<K, V> implements KeyValueInterface<K, V> {
 		// implement me
 	}
 	
-	public void put(K key, V value) throws IOException {
+	public void put(K key, V value) throws KVException {
 		// implement me
 	}
 	
-	public V get (K key) throws IOException {
+	public V get (K key) throws KVException {
 		// implement me
 		return null;
 	}
 
 	@Override
-	public void del(K key) throws IOException {
+	public void del(K key) throws KVException {
 		// implement me		
 	}
 }

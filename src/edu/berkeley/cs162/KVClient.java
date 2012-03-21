@@ -30,7 +30,6 @@
  */
 package edu.berkeley.cs162;
 
-import java.io.IOException;
 import java.net.Socket;
 
 
@@ -56,19 +55,19 @@ public class KVClient<K, V> implements KeyValueInterface<K, V> {
 	}
 	
 	@Override
-	public void put(K key, V value) throws IOException {
+	public void put(K key, V value) throws KVException {
 		// implement me
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public V get(K key) throws IOException {
+	public V get(K key) throws KVException {
 		// implement me
 		return null;
 	}
 
 	@Override
-	public void del(K key) throws IOException {
+	public void del(K key) throws KVException {
 		// implement me		
 	}
 }

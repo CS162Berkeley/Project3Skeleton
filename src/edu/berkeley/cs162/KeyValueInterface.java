@@ -29,7 +29,6 @@
  */
 package edu.berkeley.cs162;
 
-import java.io.IOException;
 
 /**
  * This is the simple interface that all of the KeyValue servers,
@@ -45,7 +44,7 @@ public interface KeyValueInterface<K,V> {
 	 * @param value is the object corresponding to a unique key
 	 * @throws IOException is thrown when there is an error when inserting the entry into the store 
 	 */
-	public void put(K key, V value) throws IOException;
+	public void put(K key, V value) throws KVException;
 	
 	/**
 	 * Retrieve the object corresponding to the provided key 
@@ -53,12 +52,12 @@ public interface KeyValueInterface<K,V> {
 	 * @return the value corresponding to the provided key
 	 * @throws IOException if there is an error when looking up the object store
 	 */
-	public V get(K key) throws IOException;
+	public V get(K key) throws KVException;
 	
 	/**
 	 * Delete the key-value object corresponding to the provided key 
 	 * @param key key is the object used to index into the store
 	 * @throws IOException if there is an error when looking up the object store
 	 */
-	public void del(K key) throws IOException;
+	public void del(K key) throws KVException;
 }

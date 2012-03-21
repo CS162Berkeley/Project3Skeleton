@@ -1,8 +1,5 @@
 /**
- * Persistent Key-Value storage layer. Current implementation is transient, 
- * but assume to be backed on disk when you do your project.
- * 
- * @author Prashanth Mohan (http://www.cs.berkeley.edu/~prmohan)
+ * Exception for KV System
  * 
  * Copyright (c) 2011, University of California at Berkeley
  * All rights reserved.
@@ -30,61 +27,15 @@
  */
 package edu.berkeley.cs162;
 
-import java.util.Dictionary;
-import java.util.Hashtable;
-
-/**
- * This is a dummy KeyValue Store. Ideally this would go to disk, 
- * or some other backing store. For this project, we simulate the disk like 
- * system using a manual delay.
- *
- * @param <K> Java Generic type for the Key
- * @param <V> Java Generic type for the Value
- */
-public class KVStore<K, V> implements KeyValueInterface<K, V> {
-	Dictionary<K, V> store = null;
-	private static long SLEEP_TIME = 1000;
+public class KVException extends Exception {
+	private static final long serialVersionUID = 1L;
+	private KVMessage msg = null;
 	
-	public KVStore() {
-		store = new Hashtable<K, V>();
-	}
-	
-	@Override
-	public void put(K key, V value) throws KVException {
-		putDelay();
-		store.put(key, value);
+	public final KVMessage getMsg() {
+		return msg;
 	}
 
-	@Override
-	public V get(K key) throws KVException {
-		getDelay();
-		return this.store.get(key);
-	}
-	
-	private void delay() {
-		try {
-			Thread.sleep(SLEEP_TIME);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	private void getDelay() {
-		delay();
-	}
-	
-	private void putDelay() {
-		delay();
-	}
-
-	private void delDelay() {
-		delay();
-	}
-	
-	@Override
-	public void del(K key) throws KVException {
-		delDelay();
-		this.store.remove(key);
+	public KVException(KVMessage msg) {
+		this.msg = msg;
 	}
 }
