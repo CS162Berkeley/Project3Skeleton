@@ -29,15 +29,17 @@
  */
 package edu.berkeley.cs162;
 
+import java.io.Serializable;
+
 
 /**
  * This is the simple interface that all of the KeyValue servers,
  * Caches and Stores should implement.
- *
+ * 
  * @param <K> Java Generic type for the Key
  * @param <V> Java Generic type for the Value
  */
-public interface KeyValueInterface<K,V> {
+public interface KeyValueInterface<K extends Serializable, V extends Serializable> {
 	/**
 	 * Insert Key, Value pair into the storage unit 
 	 * @param key is the object used to index into the store

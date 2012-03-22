@@ -30,6 +30,7 @@
  */
 package edu.berkeley.cs162;
 
+import java.io.Serializable;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
@@ -41,7 +42,7 @@ import java.util.Hashtable;
  * @param <K> Java Generic type for the Key
  * @param <V> Java Generic type for the Value
  */
-public class KVStore<K, V> implements KeyValueInterface<K, V> {
+public class KVStore<K extends Serializable, V extends Serializable> implements KeyValueInterface<K, V> {
 	Dictionary<K, V> store = null;
 	private static long SLEEP_TIME = 1000;
 	

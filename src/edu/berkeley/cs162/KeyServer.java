@@ -29,6 +29,8 @@
  */
 package edu.berkeley.cs162;
 
+import java.io.Serializable;
+
 /**
  * This class defines the salve key value servers. Each individual KeyServer 
  * would be a fully functioning Key-Value server. For Project 3, you would 
@@ -39,7 +41,7 @@ package edu.berkeley.cs162;
  * @param <K> Java Generic Type for the Key
  * @param <V> Java Generic Type for the Value
  */
-public class KeyServer<K, V> implements KeyValueInterface<K, V> {
+public class KeyServer<K extends Serializable, V extends Serializable> implements KeyValueInterface<K, V> {
 	private KVStore<K, V> dataStore = null;
 	private KVCache<K, V> dataCache = null;
 	

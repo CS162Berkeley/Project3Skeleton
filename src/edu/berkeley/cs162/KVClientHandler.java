@@ -30,6 +30,7 @@
 package edu.berkeley.cs162;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.Socket;
 
 /**
@@ -39,7 +40,7 @@ import java.net.Socket;
  * @param <K> Java Generic type for the Key
  * @param <V> Java Generic type for the Value
  */
-public class KVClientHandler<K, V> implements NetworkHandler {
+public class KVClientHandler<K extends Serializable, V extends Serializable> implements NetworkHandler {
 	private KeyServer<K, V> keyserver = null;
 	private ThreadPool threadpool = null;
 	

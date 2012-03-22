@@ -27,11 +27,13 @@
  */
 package edu.berkeley.cs162;
 
+import java.io.Serializable;
+
 /**
  * An LRU cache which has a fixed maximum number of elements (cacheSize).
  * If the cache is full and another entry is added, the LRU (least recently used) entry is dropped.
  */
-public class KVCache<K,V> implements KeyValueInterface<K, V>{
+public class KVCache<K extends Serializable, V extends Serializable> implements KeyValueInterface<K, V>{
 	private int cacheSize;
 
 	/**

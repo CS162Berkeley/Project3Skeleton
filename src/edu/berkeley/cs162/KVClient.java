@@ -30,6 +30,7 @@
  */
 package edu.berkeley.cs162;
 
+import java.io.Serializable;
 import java.net.Socket;
 
 
@@ -40,7 +41,7 @@ import java.net.Socket;
  * @param <K> Java Generic type for the Key
  * @param <V> Java Generic type for the Value
  */
-public class KVClient<K, V> implements KeyValueInterface<K, V> {
+public class KVClient<K extends Serializable, V extends Serializable> implements KeyValueInterface<K, V> {
 
 	private String server = null;
 	private int port = 0;
