@@ -60,7 +60,7 @@ public class KVMessage {
 	    public void close() {} // ignore close
 	}
 	
-	public KVMessage(InputStream input) {
+	public KVMessage(InputStream input) throws KVException {
 		// implement me	
 	}
 
