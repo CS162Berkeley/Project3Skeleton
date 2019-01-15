@@ -9,7 +9,7 @@ The project skeleton you **should** build on top of is posted at <https://github
 
 ### EC2 instructions:
 
-Read the instriuctions carefully from [this][3] document regarding instantiation, operation, and termination of EC2 instances. As always, let us know in Piazza if anything is unclear.
+Read the instructions carefully from [this][3] document regarding instantiation, operation, and termination of EC2 instances. As always, let us know in Piazza if anything is unclear.
 
 ### Requirements:
 
